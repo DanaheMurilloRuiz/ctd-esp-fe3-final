@@ -6,7 +6,6 @@ const Home = () => {
   const [dentists, setDentists] = useState([]);
   const { state } = useContext(ContextGlobal);
 
-  // Llamada a la API
   useEffect(() => {
     const fetchDentists = async () => {
       try {
@@ -25,7 +24,6 @@ const Home = () => {
     <main className={state.theme === "light" ? "light-mode" : "dark-mode"}>
       <h1>Home</h1>
       <div className='card-grid'>
-        {/* Renderizar las cards de dentistas */}
         {dentists.map((dentist) => (
           <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id} />
         ))}

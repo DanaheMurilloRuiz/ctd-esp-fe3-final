@@ -13,7 +13,7 @@ const Card = ({ name, username, id }) => {
     <h3>{name}</h3>
     <p>{username}</p>
     <Link to={`/dentist/${id}`}>Ver Detalle</Link>
-    <button onClick={addFav} className="favButton">Add fav</button> 
+    <button onClick={addFav} className="favButton">Add favorito ⭐</button> 
   </div>
 );
 };

@@ -5,7 +5,7 @@ import { ContextGlobal } from '../Components/utils/global.context';
 
 const Detail = () => {
   const { id } = useParams(); 
-  const [dentist, setDentist] = useState(null);
+  const [dentist, setDentist] = useState([]);
   const { state } = useContext(ContextGlobal);
 
   useEffect(() => {

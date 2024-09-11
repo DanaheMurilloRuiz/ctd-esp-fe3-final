@@ -20,10 +20,20 @@ const Home = () => {
     fetchDentists();
   }, []);
 
+  const styles = {
+    cardGrid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(5, 1fr)',  
+      gap: '20px',
+      padding: '15px',
+      justifyItems: 'center'
+    },
+  };
+
   return (
     <main className={state.theme === "light" ? "light-mode" : "dark-mode"}>
       <h1>Home</h1>
-      <div className='card-grid'>
+      <div className='cardGrid'  style={styles.cardGrid}>
         {dentists.map((dentist) => (
           <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id} />
         ))}

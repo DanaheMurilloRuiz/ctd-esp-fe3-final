@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { ContextGlobal } from '../Components/utils/global.context';
+import React, { useContext } from "react";
+import { ContextGlobal } from "../Components/utils/global.context";
+import { Link } from "react-router-dom";
 import '../Styles/Navbar.css';
 
 const Navbar = () => {
@@ -15,15 +15,15 @@ const Navbar = () => {
       <div>
         <img className='icon-logo' src="../../public/images/DH.png" alt="Logo" />
       </div>
-      <div className="right">
-        <Link to="/home" className="link">Home</Link>
-        <Link to="/contacto" className="link">Contact</Link>
-        <Link to="/favs" className="link">Favs</Link>
-
-        <button className="button" onClick={toggleTheme}>
-          {state.theme === "light" ? "Dark" : "Light"} Mode
-        </button>
+      <div className="right"> 
+        <Link to="/home">Home</Link>
+        <Link to="/contacto">Contact</Link>
+        <Link to="/favs">Favs</Link>        
       </div>
+      
+      <button className="button" onClick={toggleTheme}>
+        {state.theme === "light" ? "Dark" : "Light"} Mode
+      </button>
     </nav>
   );
 };

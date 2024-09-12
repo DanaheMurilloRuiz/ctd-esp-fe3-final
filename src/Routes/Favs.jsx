@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ContextGlobal } from "../Components/utils/global.context";
+import Card from "../Components/Card";
 
 const Favs = () => {
   const { state, dispatch } = useContext(ContextGlobal);
@@ -13,10 +14,13 @@ const Favs = () => {
       <h1>Favorites</h1>
       <div className="card-grid">
         {state.favorites.map(fav => (
-          <div key={fav.id}>
-            <h2>{fav.name}</h2>
-            <button onClick={() => removeFromFavorites(fav.id)}>Remove from Favorites</button>
-          </div>
+          <Card
+            key={fav.id}
+            odontologist={fav}
+            removeFromFavorites={() => removeFromFavorites(fav.id)}
+            showLink={false}
+            isFavoritePage={true}
+          />
         ))}
       </div>
     </div>

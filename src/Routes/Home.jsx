@@ -6,7 +6,6 @@ import Card from "../Components/Card";
 const Home = () => {
   const { state, dispatch } = useContext(ContextGlobal);
 
-
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get("https://jsonplaceholder.typicode.com/users");
@@ -18,24 +17,17 @@ const Home = () => {
 
   return (
     <main>
-      <h1>Odontologists</h1>
-      <div className="card-grid" style={styles.cardGrid}>
-        {state.odontologists.map(odontologist => (
-          <Card key={odontologist.id} odontologist={odontologist} />
-        ))}
+      <div style={{ backgroundColor: state.theme === 'light' ? '#fff' : '#333', color: state.theme === 'light' ? '#000' : '#fff' }}>
+        <h1>Odontologists</h1>
+        <div className="card-grid">
+          {state.odontologists.map(odontologist => (
+            <Card key={odontologist.id} odontologist={odontologist} />
+          ))}
+        </div>
       </div>
+      
     </main>
   );
-};
-
-const styles = {
-  cardGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(5, 1fr)',  
-    gap: '20px',
-    padding: '15px',
-    justifyItems: 'center'
-  },
 };
 
 export default Home;

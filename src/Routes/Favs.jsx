@@ -10,7 +10,7 @@ const Favs = () => {
   };
 
   return (
-    <div>
+    <div  style={{ backgroundColor: state.theme === 'light' ? '#fff' : '#333', color: state.theme === 'light' ? '#000' : '#fff' }}>
       <h1>Favorites</h1>
       <div className="card-grid">
         {state.favorites.map(fav => (

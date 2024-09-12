@@ -22,7 +22,7 @@ const Navbar = () => {
       </div>
       
       <button className="button" onClick={toggleTheme}>
-        {state.theme === "light" ? "Dark" : "Light"} Mode
+        {state.theme === "light" ? "🌘" : "🔆"}
       </button>
     </nav>
   );

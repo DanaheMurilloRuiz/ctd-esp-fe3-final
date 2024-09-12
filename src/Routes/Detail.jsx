@@ -27,7 +27,7 @@ const Detail = () => {
   }
 
   return (
-    <div className={state.theme === "light" ? "light-mode" : "dark-mode"}>
+    <div style={{ backgroundColor: state.theme === 'light' ? '#fff' : '#333', color: state.theme === 'light' ? '#000' : '#fff' }}>
       <h1>Detail of Dentist {dentist.id}</h1>
       <p><strong>Name:</strong> {dentist.name}</p>
       <p><strong>Email:</strong> {dentist.email}</p>

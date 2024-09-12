@@ -1,12 +1,11 @@
 footer {
     position: relative;
     width: 100%;
-    background-color: white;
 }
 
 .footer-bar {
-    background-color: red;
-    height: 30px;
+    background-color: #DA142Ced;
+    height: 35px;
     width: 100%;
     position: absolute;
     top: 0;

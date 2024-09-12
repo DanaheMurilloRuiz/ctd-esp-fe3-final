@@ -47,21 +47,21 @@ const Form = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Nombre Completo:</label>
           <input
             type="text"
             id="name"
             name="name"
+            placeholder="Nombre"
             value={formData.name}
             onChange={handleInputChange}
           />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"
             name="email"
+            placeholder="Correo electrónico"
             value={formData.email}
             onChange={handleInputChange}
           />

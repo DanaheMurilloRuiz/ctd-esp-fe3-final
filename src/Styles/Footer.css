@@ -1,0 +1,46 @@
+footer {
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+
+.footer-bar {
+    background-color: red;
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.icon-footer {
+    height: 40px;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: auto;
+    background-color: black;
+    border-radius: 10%;
+}

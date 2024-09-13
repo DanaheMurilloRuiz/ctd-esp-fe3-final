@@ -15,13 +15,13 @@ const Footer = () => {
       <div className="footer-bar"> Hecho con 🤍 y ☕ por Danahe Murillo y Daniel Mera</div>
       <div className="footer-content">
         <div className="footer-left">
-          <img className='icon-footer' src="../../public/images/DH.png" alt="Logo" />
+          <img className='icon-footer' src="/images/DH.png" alt="Logo" />
         </div>
         <div className="footer-right">
-          <img className='social-icon' src="../../public/images/ico-facebook.png" alt="Facebook" />
-          <img className='social-icon' src="../../public/images/ico-whatsapp.png" alt="Whatsapp" />
-          <img className='social-icon' src="../../public/images/ico-instagram.png" alt="Instagram" />
-          <img className='social-icon' src="../../public/images/ico-tiktok.png" alt="Tiktok" />
+          <img className='social-icon' src="/images/ico-facebook.png" alt="Facebook" />
+          <img className='social-icon' src="/images/ico-whatsapp.png" alt="Whatsapp" />
+          <img className='social-icon' src="/images/ico-instagram.png" alt="Instagram" />
+          <img className='social-icon' src="/images/ico-tiktok.png" alt="Tiktok" />
         </div>
       </div>
     </footer>

@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${state.theme === "light" ? "light" : "dark"}`}>
       <div>
-        <img className='icon-logo' src="../../public/images/DH.png" alt="Logo" />
+        <img className='icon-logo' src="/images/DH.png" alt="Logo" />
       </div>
       <div className="right"> 
         <Link to="/home">Home</Link>

@@ -19,7 +19,7 @@ const Card = ({ odontologist, removeFromFavorites, showLink = true, isFavoritePa
       <img
         className="icon-doctor"
         style={styles.icondoctor}
-        src="../../public/images/doctor.jpg"
+        src="/images/doctor.jpg"
         alt="Logo"
       />
       {showLink ? (

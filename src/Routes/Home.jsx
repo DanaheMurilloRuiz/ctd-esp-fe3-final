@@ -19,15 +19,24 @@ const Home = () => {
     <main>
       <div style={{ backgroundColor: state.theme === 'light' ? '#fff' : '#333', color: state.theme === 'light' ? '#000' : '#fff' }}>
         <h1>Odontologists</h1>
-        <div className="card-grid">
+        <div className="card-grid" style={styles.cardGrid}>
           {state.odontologists.map(odontologist => (
             <Card key={odontologist.id} odontologist={odontologist} />
           ))}
         </div>
       </div>
-      
     </main>
   );
+};
+
+const styles = {
+  cardGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(5, 1fr)',
+    gap: '20px', 
+    padding: '15px',
+    justifyItems: 'center'
+  },
 };
 
 export default Home;

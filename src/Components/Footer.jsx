@@ -3,9 +3,8 @@ import { ContextGlobal } from '../Components/utils/global.context';
 import '../Styles/Footer.css';
 
 const Footer = () => {
-  const { state } = useContext(ContextGlobal); // Accede al contexto para obtener el estado del tema
+  const { state } = useContext(ContextGlobal); 
 
-  // Define los estilos basados en el tema
   const footerStyles = {
     backgroundColor: state.theme === 'light' ? '#fff' : '#333',
     color: state.theme === 'light' ? '#000' : '#fff',

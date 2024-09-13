@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   color: var(--text-color);
+  /* margin-bottom: 2rem; */
 }
 
 * {
@@ -51,7 +52,6 @@ a:hover {
 }
 
 footer {
-  margin-top: 2rem;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -59,7 +59,7 @@ footer {
   position: relative;
   bottom: 0;
   width: 90%;
-  height: 130px;
+  height: 180px;
   background-color: var(--background-color);
 }
 
@@ -106,6 +106,7 @@ form {
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+  grid-template-columns: repeat(5, 1fr) ;
 }
 
 table {
@@ -146,3 +147,4 @@ tr:nth-child(even) {
   --background-color: #333333;
   --text-color: #ffffff;
 }
+

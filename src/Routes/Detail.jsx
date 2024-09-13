@@ -1,11 +1,10 @@
-
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { ContextGlobal } from '../Components/utils/global.context';
 
 const Detail = () => {
   const { id } = useParams(); 
-  const [dentist, setDentist] = useState([]);
+  const [dentist, setDentist] = useState(null);
   const { state } = useContext(ContextGlobal);
 
   useEffect(() => {
@@ -27,14 +26,47 @@ const Detail = () => {
   }
 
   return (
-    <div style={{ backgroundColor: state.theme === 'light' ? '#fff' : '#333', color: state.theme === 'light' ? '#000' : '#fff' }}>
+    <div 
+      style={{
+        backgroundColor: state.theme === 'light' ? '#fff' : '#333', 
+        color: state.theme === 'light' ? '#000' : '#fff',
+        padding: '20px'
+      }}
+    >
       <h1>Detail of Dentist {dentist.id}</h1>
-      <p><strong>Name:</strong> {dentist.name}</p>
-      <p><strong>Email:</strong> {dentist.email}</p>
-      <p><strong>Phone:</strong> {dentist.phone}</p>
-      <p><strong>Website:</strong> {dentist.website}</p>
+      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <thead>
+          <tr>
+            <th style={styles.th}>Name</th>
+            <th style={styles.th}>Email</th>
+            <th style={styles.th}>Phone</th>
+            <th style={styles.th}>Website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style={styles.td}>{dentist.name}</td>
+            <td style={styles.td}>{dentist.email}</td>
+            <td style={styles.td}>{dentist.phone}</td>
+            <td style={styles.td}>{dentist.website}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
+};
+
+const styles = {
+  th: {
+    border: '1px solid #ddd',
+    padding: '8px',
+    textAlign: 'left'
+  },
+  td: {
+    border: '1px solid #ddd',
+    padding: '8px',
+    textAlign: 'left',
+  }
 };
 
 export default Detail;

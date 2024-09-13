@@ -66,6 +66,16 @@ const Form = () => {
             onChange={handleInputChange}
           />
         </div>
+        <div>
+          <input
+            type="text"
+            id="text"
+            name="text"
+            placeholder="¿Cuál es tu pregunta?"
+            value={formData.text}
+            onChange={handleInputChange}
+          />
+        </div>
         <button type="submit">Enviar</button>
       </form>
 

@@ -1,9 +1,9 @@
 // src/reducer.js
 
 export const initialState = {
-    odontologists: [],   
-    favorites: [],       
-    theme: "light"       
+    odontologists: [],
+    favorites: JSON.parse(localStorage.getItem('favorites')) || [],  
+    theme: "light"
 };
 
 export const reducer = (state, action) => {
@@ -15,21 +15,25 @@ export const reducer = (state, action) => {
             };
 
         case "ADD_FAV":
+            const updatedFavsAdd = [...state.favorites, action.payload];
+            localStorage.setItem('favorites', JSON.stringify(updatedFavsAdd));
             return {
                 ...state,
-                favorites: [...state.favorites, action.payload]  
+                favorites: updatedFavsAdd
             };
 
         case "REMOVE_FAV":
+            const updatedFavsRemove = state.favorites.filter(fav => fav.id !== action.payload);
+            localStorage.setItem('favorites', JSON.stringify(updatedFavsRemove));  
             return {
                 ...state,
-                favorites: state.favorites.filter(fav => fav.id !== action.payload)  
+                favorites: updatedFavsRemove
             };
 
         case "TOGGLE_THEME":
             return {
                 ...state,
-                theme: state.theme === "light" ? "dark" : "light"  
+                theme: state.theme === "light" ? "dark" : "light"
             };
 
         default:
